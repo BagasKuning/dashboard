@@ -9,8 +9,8 @@ import { links } from '../data/dummy'
 export default function SideBar() {
 
   const activeMenu = true;
-  const activeLink = "top items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
-  const normalLink = "top items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ";
+  const activeLink = "flex top items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
+  const normalLink = "flex top items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ";
 
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
@@ -37,8 +37,10 @@ export default function SideBar() {
                 key={link.name}
                  onClick={() => {}} 
                  className={({isActive}) => isActive ? activeLink : normalLink}>
-                  {link.icon}
-                  <span className='capitalize'>
+                  <div className='text-black'>
+                    {link.icon}
+                  </div>
+                  <span className='capitalize text-black'>
                     {link.name}
                   </span>
                 </NavLink>
