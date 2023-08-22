@@ -22,14 +22,16 @@ export default function SideBar() {
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (<>
         <div className='flex justify-between items-center'>
-          <Link to='/' onClick={() =>{}} className='items-center gap-3 ml-3 mt-7 flex text-xl 
+          <Link to='/' onClick={() =>{}} className='items-center justify-between w-full gap-3 mb-2 ml-3 mt-7 flex text-xl 
           font-extrabold tracking-tight dark:text-white text-slate-900'>
-            <SiShopware/> <span>Shoppy</span>
+            <div className='items-center flex'>
+              <SiShopware/> <span>Shoppy</span>
+            </div>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
                 onClick={() => setActiveMenu(!activeMenu)}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+                className="text-xl rounded-full p-3 hover:bg-light-gray block md:hidden right-0"
               >
                 <MdOutlineCancel />
               </button>
