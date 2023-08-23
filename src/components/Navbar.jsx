@@ -42,7 +42,7 @@ export default function Navbar() {
     } else {
       setActiveMenu(true)
     }
-  }, screenSize)
+  }, [screenSize])
 
  
   return (
