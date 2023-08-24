@@ -5,11 +5,7 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '.
 
 export default function Stacked({width, height}) {
   return (
-    <ChartComponent width={width} height={height} id="stack chart" 
-
-    //idk why my id charts is cousing the eror
-    // id="charts" 
-
+    <ChartComponent width={width} height={height} id="charts" 
       primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis}
       chartArea={{border: {width: 0}}}
       tooltip={{enable: true}}
