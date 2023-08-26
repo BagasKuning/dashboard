@@ -18,10 +18,10 @@ export default function Orders() {
       >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
-            <ColumnsDirective key={index} {...item} />
+            <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject servixes={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
+        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
       </GridComponent>
     </div>
   )
