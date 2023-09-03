@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
 import { Stacked, Pie, Button, SparkLine } from '../components';
@@ -7,6 +7,9 @@ import { useStateContext } from '../context/ContextProvider';
 
 
 export default function ECommerce() {
+
+  const { currentColor } = useStateContext();
+
   return (
     <div className='mt-12'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
@@ -20,7 +23,7 @@ export default function ECommerce() {
           <div className='mt-6'>
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
               size={'md'}
@@ -84,7 +87,7 @@ export default function ECommerce() {
 
                     <div className='mt-5'>
                       <SparkLine
-                        currentColor="blue"
+                        currentColor={currentColor}
                         id='line-sparkline'
                         type='Line'
                         height="80px"
@@ -96,7 +99,7 @@ export default function ECommerce() {
                     <div className='mt-10'>
                       <Button
                         color={"white"}
-                        bgColor={"blue"}
+                        bgColor={currentColor}
                         text={"Download Report"}
                         borderRadius={"10px"}
                       />
