@@ -19,7 +19,7 @@ export default function LineChart() {
       <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
       <SeriesCollectionDirective>
         {lineCustomSeries.map((item, index) => (
-          <SeriesDirective key={index} {...item} />
+          <SeriesDirective key={index} {...item} className="dark:text-white" />
         ))}
       </SeriesCollectionDirective>
     </ChartComponent>

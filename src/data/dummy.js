@@ -81,42 +81,19 @@ const gridEmployeeCountry = (props) => (
 export const EditorData = () => (
   <div>
     <h3>
-      Try React
-      React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
+    In the ever-evolving era of globalization, information technology has played an increasingly vital role in almost every aspect of human life. The internet has transformed the way we communicate, work, learn, shop, and even socialize. In this increasingly connected environment, data has become one of the most valuable assets, with billions of bytes of data generated every day.
 
-      Online Playgrounds
-      If you’re interested in playing around with React, you can use an online code playground. Try a Hello World template on CodePen, CodeSandbox, or Stackblitz.
+    Today, data analytics has become a crucial tool in decision-making across various domains, including business, science, government, and healthcare. Organizations and individuals collect, store, and analyze data to uncover valuable insights, identify trends, and plan for the future.
 
-      If you prefer to use your own text editor, you can also download this HTML file, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we’d only recommend using this for simple demos.
+    However, with the unstoppable data explosion, a significant challenge is how to efficiently manage, store, and process it. This is where technologies like cloud computing, artificial intelligence, and machine learning play a major role. They enable us to cope with large volumes of data and generate actionable information for better decision-making.
 
-      Add React to a Website
-      You can add React to an HTML page in one minute. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+    In recent years, we've also witnessed rapid developments in fields such as the Internet of Things (IoT), where online-connected devices generate vast amounts of data. This opens up new opportunities for innovation and efficiency across various industries, including manufacturing, transportation, and energy.
 
-      Create a New React App
-      When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!
+    Yet, with all these advancements, new challenges related to data privacy and security have also emerged. Protecting personal data and cybersecurity have become increasingly critical in this interconnected world.
 
-      As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. Learn how.
+    In this context, it's important to acknowledge that information technology and data analytics are powerful tools that can bring positive change to our society. However, the wise and ethical use of this technology is equally important to ensure its benefits are enjoyed by everyone.
 
-      Learn React
-      People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
-
-      If you prefer to learn by doing, start with our practical tutorial.
-      If you prefer to learn concepts step by step, start with our guide to main concepts.
-      Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.
-
-      First Examples
-      The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
-
-      React for Beginners
-      If you feel that the React documentation goes at a faster pace than you’re comfortable with, check out this overview of React by Tania Rascia. It introduces the most important React concepts in a detailed, beginner-friendly way. Once you’re done, give the documentation another try!
-
-      React for Designers
-      If you’re coming from a design background, these resources are a great place to get started.
-
-      JavaScript Resources
-      The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.
-
-      We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
+    The more we understand and harness the potential of information technology and data, the greater positive impact we can create in this ever-evolving world.
     </h3>
   </div>
 );
@@ -264,7 +241,7 @@ export const barCustomSeries = [
     xName: 'x',
     yName: 'y',
     name: 'Gold',
-    type: 'Column',
+    type: 'Bar',
     marker: {
       dataLabel: {
         visible: true,
@@ -278,7 +255,7 @@ export const barCustomSeries = [
     xName: 'x',
     yName: 'y',
     name: 'Silver',
-    type: 'Column',
+    type: 'Bar',
     marker: {
       dataLabel: {
         visible: true,
@@ -292,7 +269,7 @@ export const barCustomSeries = [
     xName: 'x',
     yName: 'y',
     name: 'Bronze',
-    type: 'Column',
+    type: 'Bar',
     marker: {
       dataLabel: {
         visible: true,
@@ -3046,7 +3023,7 @@ export const lineChartData = [
     { x: new Date(2008, 0, 1), y: 38 },
     { x: new Date(2009, 0, 1), y: 54 },
     { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 70 },
+    { x: new Date(2011, 0, 1), y: 40 },
   ],
   [
     { x: new Date(2005, 0, 1), y: 28 },
@@ -3062,10 +3039,20 @@ export const lineChartData = [
     { x: new Date(2005, 0, 1), y: 10 },
     { x: new Date(2006, 0, 1), y: 20 },
     { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 39 },
-    { x: new Date(2009, 0, 1), y: 50 },
+    { x: new Date(2008, 0, 1), y: 29 },
+    { x: new Date(2009, 0, 1), y: 47 },
     { x: new Date(2010, 0, 1), y: 70 },
     { x: new Date(2011, 0, 1), y: 100 },
+  ],
+
+  [
+    { x: new Date(2005, 0, 1), y: 20 },
+    { x: new Date(2006, 0, 1), y: 60 },
+    { x: new Date(2007, 0, 1), y: 35 },
+    { x: new Date(2008, 0, 1), y: 48 },
+    { x: new Date(2009, 0, 1), y: 50 },
+    { x: new Date(2010, 0, 1), y: 70 },
+    { x: new Date(2011, 0, 1), y: 70 },
   ],
 ];
 export const dropdownData = [
@@ -3111,6 +3098,13 @@ export const lineCustomSeries = [
     xName: 'x',
     yName: 'y',
     name: 'India',
+    width: '2',
+    marker: { visible: true, width: 10, height: 10 },
+    type: 'Line' },
+  { dataSource: lineChartData[3],
+    xName: 'x',
+    yName: 'y',
+    name: 'Indonesia',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
