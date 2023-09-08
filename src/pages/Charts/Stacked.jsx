@@ -9,7 +9,7 @@ export default function Stacked() {
 
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
-      <Header category={"Chart"} title={"Monthly Budget and Expense Analysis"} />
+      <Header category={"Stacked Column"} title={"Monthly Budget and Expense Analysis"} />
 
       <ChartComponent
         id='chart'
