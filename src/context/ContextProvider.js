@@ -19,6 +19,7 @@ export const ContextProvider = (({children}) => {
 
     const handleClick = (clicked) => {
         setIsClicked({...initialState, [clicked]: true})
+        console.log()
     }
     
     const setMode = (e) => {
