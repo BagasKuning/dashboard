@@ -19,7 +19,9 @@ export const ContextProvider = (({children}) => {
 
     const handleClick = (clicked) => {
         setIsClicked({...initialState, [clicked]: true})
-        console.log()
+    }
+    const closedNav = (clicked) => {
+        setIsClicked({...initialState, [clicked]: false})
     }
     
     const setMode = (e) => {
@@ -47,7 +49,8 @@ export const ContextProvider = (({children}) => {
             setMode,
             currentMode, setCurrentMode,
             currentColor, setCurrentColor,
-            themeSettings, setThemeSettings
+            themeSettings, setThemeSettings,
+            closedNav
 
             }}>
                 {children}

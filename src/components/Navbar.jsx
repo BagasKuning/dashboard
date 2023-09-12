@@ -24,7 +24,7 @@ export default function Navbar() {
   const { activeMenu, setActiveMenu,
           isClicked, setIsClicked,
           handleClick,
-          screenSize, setScreenSize, currentColor} = useStateContext()
+          screenSize, setScreenSize, currentColor } = useStateContext()
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);

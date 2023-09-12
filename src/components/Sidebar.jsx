@@ -27,16 +27,17 @@ export default function SideBar() {
             <div className='items-center flex'>
               <SiShopware/> <span>Shoppy</span>
             </div>
+          </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
                 onClick={() => setActiveMenu(!activeMenu)}
-                className="text-xl rounded-full p-3 hover:bg-light-gray block md:hidden right-0"
+                style={{ color: currentColor }}
+                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block"
               >
                 <MdOutlineCancel />
               </button>
             </TooltipComponent>
-          </Link>
         </div>
         <div className='mt-10 '>
           {links.map((item) => (
