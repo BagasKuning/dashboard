@@ -8,11 +8,13 @@ import { useStateContext } from '../context/ContextProvider';
 
 export default function UserProfile() {
 
-  const { closedNav } = useStateContext();
+  const { closedNav, currentColor } = useStateContext();
 
   return (
-    <div className='p-6 pt-0 absolute dark:bg-slate-800 bg-main-dark-bg text-white rounded-md'>
-      <div className='flex justify-between my-6 items-center'>
+    <div className='px-6 mr-9 absolute dark:bg-slate-800 bg-main-dark-bg text-white rounded-md 
+    max-[340px]:w-full max-[340px]:mr-0'
+    >
+      <div className='flex justify-between my-5 items-center'>
         <span className='font-medium'>Profile</span>
     
         <TooltipComponent content="Close" position="LeftCenter">
@@ -25,14 +27,35 @@ export default function UserProfile() {
             </button>
         </TooltipComponent>
       </div>
-      <div className='flex items-center w-full'>
+      <div className='flex items-center w-full border-b-1 pb-6'>
         <img src={avatar3} className='rounded-full w-20 h-20' alt='' />
         <div className='ml-3 flex-col leading-tight'>
-          <span className='text-xl'>Andy Dufresne</span>
+          <span className='text-xl font-semibold'>Andy Dufresne</span>
           <p className='text-[10.5px] text-gray-400'>Administrator</p>
           <p className='text-[10.5px] text-gray-400'>andy55@gmail.com</p>
         </div>
       </div>
+
+      {userProfileData.map((item, index) => (
+        <div key={index} className='flex border-b-1 py-2' >
+          <button
+          type='button'
+          style={{ backgroundColor: item.iconBg, color: item.iconColor }}
+          className='p-2 text-xl rounded-md'
+          >
+            {item.icon}
+          </button>
+
+          <div className='ml-2'>
+            <p className='font-medium leading-5'>{item.title}</p>
+            <p className='text-xs text-gray-400'>{item.desc}</p>
+          </div>
+        </div>
+      ))}
+
+      <button type='button' className='flex justify-center w-full py-2 mb-5 mt-3 rounded-md' style={{background: currentColor}}>
+        Logout
+      </button>
 
     </div>
   )

@@ -78,17 +78,17 @@ export default function Navbar() {
             <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
               onClick={() => handleClick('userProfile')}
             >
-              <img src={avatar3} className='rounded-full w-8 h-8' />
+              <img src={avatar3} className='rounded-full w-8 h-8 ml-2' />
               <p>
-                <span className='text-gray-400 text-14'>Hi, </span> {' '}
-                <span className='text-gray-400 font-bold ml-1 text-14'>Andy</span>
+                {/* <span className='text-gray-400 text-14'>Hi, </span> {' '} */}
+                <span className='font-bold text-14 text-gray-400'>Andy</span>
               </p>
               <MdKeyboardArrowDown className='text-gray-400 text-14'  />
             </div>
           </TooltipComponent>
         </div>
       </div>
-      <div className='flex justify-end mr-9 dark:text-white'>
+      <div className='flex justify-end dark:text-white'>
         {isClicked.cart && <Cart/>}
         {isClicked.chat && <Chat/>}
         {isClicked.notification && <Notification/>}
