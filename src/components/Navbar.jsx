@@ -65,12 +65,6 @@ export default function Navbar() {
           color={currentColor} 
           icon={<BsChatLeft/>} /> 
 
-          <NavButton title={'Notification'}
-          dotColor={"#03C9D7"}
-          customFunc={() => handleClick('notification')} 
-          color={currentColor} 
-          icon={<RiNotification3Line/>} /> 
-
           <TooltipComponent
             content={'profile'}
             position='BottomCenter'
@@ -91,7 +85,6 @@ export default function Navbar() {
       <div className='flex justify-end dark:text-white'>
         {isClicked.cart && <Cart/>}
         {isClicked.chat && <Chat/>}
-        {isClicked.notification && <Notification/>}
         {isClicked.userProfile && <UserProfile/>}
       </div>
     </div>

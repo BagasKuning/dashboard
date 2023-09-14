@@ -806,10 +806,6 @@ export const themeColors = [
     color: '#7352FF',
   },
   {
-    name: 'red-theme',
-    color: '#FF5C8E',
-  },
-  {
     name: 'indigo-theme',
     color: '#1E4DB7',
   },
