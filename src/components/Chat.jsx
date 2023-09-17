@@ -29,7 +29,7 @@ export default function Chat() {
 
       {chatData?.map((item, index) => (
         <div key={index} className='flex border-b-1 py-2 items-center relative' >
-          <img src={item.image} alt="#" className='rounded-full w-16 h-16' />
+          <img src={item.image} alt="#" className='rounded-full w-16 h-16 object-cover' />
 
           <div className='ml-2 leading-6'>
             <p className='font-medium text-sm'>{item.message}</p>

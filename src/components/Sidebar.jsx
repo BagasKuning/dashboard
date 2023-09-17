@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { SiShopware } from 'react-icons/si';
+import { BiSolidDashboard } from 'react-icons/bi';
 import { MdOutlineCancel } from 'react-icons/md'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import { useStateContext } from '../context/ContextProvider';
@@ -25,7 +25,7 @@ export default function SideBar() {
           <Link to='/' onClick={() =>{}} className='items-center justify-between w-full gap-3 mb-2 ml-3 mt-7 flex text-xl 
           font-extrabold tracking-tight dark:text-white text-slate-900'>
             <div className='items-center flex'>
-              <SiShopware/> <span>Shoppy</span>
+              <BiSolidDashboard/> <span>DashView</span>
             </div>
           </Link>
             <TooltipComponent content="Menu" position="BottomCenter">

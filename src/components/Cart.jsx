@@ -21,7 +21,7 @@ export default function Cart() {
     const cartData = [...data];
 
     cartData[index].val--;
-
+    
     setData(cartData);
   }
 
@@ -78,6 +78,18 @@ export default function Cart() {
             </span>
           </div>
         ))}
+
+        <div className="flex justify-between mt-2 items-center">
+          <p className="text-gray-400">Sub Total</p>
+          <span className="text-sm">$499</span>
+        </div>
+        <div className="flex justify-between my-2 items-center">
+          <p className="text-gray-400 ">Total</p>
+          <span className="text-sm">$569</span>
+        </div>
+        <button type='button' className='flex justify-center w-full py-2 mb-5 mt-3 rounded-md' style={{background: currentColor}}>
+          Order Now
+        </button>
       </div>
     </div>
   );
