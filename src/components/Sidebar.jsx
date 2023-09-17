@@ -19,7 +19,7 @@ export default function SideBar() {
   }
 
   return (
-    <div className="pl-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 dark:bg-main-dark-bg">
+    <div className="pl-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 dark:bg-main-dark-bg z-10">
       {activeMenu && (<>
         <div className='flex justify-between items-center '>
           <Link to='/' onClick={() =>{}} className='items-center justify-between w-full gap-3 mb-2 ml-3 mt-7 flex text-xl 

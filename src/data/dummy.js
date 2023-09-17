@@ -538,6 +538,7 @@ export const cartData = [
     name: 'butterscotch ice-cream',
     category: 'Milk product',
     price: '$250',
+    val: 0,
   },
   {
     image:
@@ -545,6 +546,7 @@ export const cartData = [
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
     price: '$450',
+    val: 0,
   },
   {
     image:
@@ -552,6 +554,7 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$190',
+    val: 0,
   },
 ];
 
