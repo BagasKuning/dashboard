@@ -1,6 +1,6 @@
 import React from 'react'
 import { KanbanComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-kanban'
-import { kandanData, kanbanGrid, kanbanData } from "../data/dummy"
+import { kanbanGrid, kanbanData } from "../data/dummy"
 import { Header } from '../components'
 
 export default function Kanban() {

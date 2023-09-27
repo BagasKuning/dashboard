@@ -12,7 +12,7 @@ export default function UserProfile() {
 
   return (
     <div className='px-6 mr-9 absolute dark:bg-slate-800 bg-main-dark-bg text-white rounded-md 
-    max-[340px]:w-full max-[340px]:mr-0'
+    max-[340px]:w-full max-[340px]:mr-0 z-50' 
     >
       <div className='flex justify-between my-5 items-center'>
         <span className='font-medium'>Profile</span>

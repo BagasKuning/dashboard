@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md"
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import avatar3 from '../data/avatar3.png'
-import { Cart, Chat, Notification, UserProfile } from '.'
+import { Cart, Chat, UserProfile } from '.'
 import { useStateContext } from '../context/ContextProvider'
 
 
@@ -20,8 +20,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 export default function Navbar() {
-  const { activeMenu, setActiveMenu,
-          isClicked, setIsClicked,
+  const { setActiveMenu,
+          isClicked,
           handleClick,
           screenSize, setScreenSize, currentColor } = useStateContext()
 
@@ -33,7 +33,7 @@ export default function Navbar() {
     handleResize()
 
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [setScreenSize])
 
   useEffect(() => {
     if(screenSize <= 900){
@@ -41,7 +41,7 @@ export default function Navbar() {
     } else {
       setActiveMenu(true)
     }
-  }, [screenSize])
+  }, [screenSize, setActiveMenu])
 
  
   return (
@@ -71,7 +71,7 @@ export default function Navbar() {
             <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
               onClick={() => handleClick('userProfile')}
             >
-              <img src={avatar3} className='rounded-full w-8 h-8 ml-2' />
+              <img src={avatar3} className='rounded-full w-8 h-8 ml-2' alt='' />
               <p>
                 {/* <span className='text-gray-400 text-14'>Hi, </span> {' '} */}
                 <span className='font-bold text-14 text-gray-400'>Andy</span>
