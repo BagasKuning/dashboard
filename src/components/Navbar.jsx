@@ -81,7 +81,7 @@ export default function Navbar() {
           </TooltipComponent>
         </div>
       </div>
-      <div className='flex justify-end dark:text-white'>
+      <div className='flex justify-end dark:text-white z-50'>
         {isClicked.cart && <Cart/>}
         {isClicked.chat && <Chat/>}
         {isClicked.userProfile && <UserProfile/>}
