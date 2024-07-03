@@ -10,8 +10,8 @@ export default function Chat() {
   const { closedNav, currentColor } = useStateContext();
 
   return (
-    <div className='px-6 mr-9 absolute dark:bg-slate-800 bg-main-dark-bg text-white rounded-md 
-    max-[340px]:w-full max-[340px]:mr-0 z-50'
+    <div className='shadow-lg px-6 mr-9 absolute dark:bg-slate-800 bg-main-bg rounded-md 
+    w-full max-w-sm max-sm:mr-0 z-50'
     >
       <div className='flex justify-between my-5 items-center'>
         <span className='font-medium'>Messages</span>
@@ -28,7 +28,7 @@ export default function Chat() {
       </div>
 
       {chatData?.map((item, index) => (
-        <div key={index} className='flex border-b-1 py-2 items-center relative' >
+        <div key={index} className='flex border-b-1 py-3 items-center relative' >
           <img src={item.image} alt="#" className='rounded-full w-16 h-16 object-cover' />
 
           <div className='ml-2 leading-6'>

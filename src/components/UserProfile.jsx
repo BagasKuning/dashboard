@@ -11,11 +11,11 @@ export default function UserProfile() {
   const { closedNav, currentColor } = useStateContext();
 
   return (
-    <div className='px-6 mr-9 absolute dark:bg-slate-800 bg-main-dark-bg text-white rounded-md 
-    max-[340px]:w-full max-[340px]:mr-0 z-50' 
+    <div className='px-6 mr-9 absolute dark:bg-slate-800 bg-main-bg shadow-lg rounded-md 
+    w-full max-w-sm max-sm:mr-0 z-50' 
     >
       <div className='flex justify-between my-5 items-center'>
-        <span className='font-medium'>Profile</span>
+        <span className='font-semibold'>Profile</span>
     
         <TooltipComponent content="Close" position="LeftCenter">
           <button
@@ -31,13 +31,13 @@ export default function UserProfile() {
         <img src={avatar3} className='rounded-full w-20 h-20' alt='' />
         <div className='ml-3 flex-col leading-tight'>
           <span className='text-xl font-semibold'>Andy Dufresne</span>
-          <p className='text-[10.5px] text-gray-400'>Administrator</p>
-          <p className='text-[10.5px] text-gray-400'>andy55@gmail.com</p>
+          <p className=' text-sm text-gray-400'>Administrator</p>
+          <p className=' text-sm text-gray-400'>andy55@gmail.com</p>
         </div>
       </div>
 
       {userProfileData.map((item, index) => (
-        <div key={index} className='flex border-b-1 py-2' >
+        <div key={index} className='flex border-b-1 py-4' >
           <button
           type='button'
           style={{ backgroundColor: item.iconBg, color: item.iconColor }}
@@ -53,7 +53,7 @@ export default function UserProfile() {
         </div>
       ))}
 
-      <button type='button' className='flex justify-center w-full py-2 mb-5 mt-3 rounded-md' style={{background: currentColor}}>
+      <button type='button' className='flex justify-center w-full py-2 mb-5 mt-4 rounded-md' style={{background: currentColor}}>
         Logout
       </button>
 

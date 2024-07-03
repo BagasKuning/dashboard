@@ -12,7 +12,7 @@ export default function ECommerce() {
   return (
     <div className='mt-12'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
-        <div className='bg-white dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
+        <div className='shadow bg-white dark:bg-secondary-dark-bg rounded-xl w-full lg:w-72 h-full p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
               <p className='font-bold text-gray-600'>Earnings</p>
@@ -30,19 +30,19 @@ export default function ECommerce() {
           </div>
         </div>
 
-        <div className='flex justify-center gap-1 items-center m-3 flex-wrap'>
+        <div className='flex justify-center gap-1 items-center m-3 flex-wrap lg:flex-nowrap'>
           {earningData.map((item) => (
-            <div key={item.title} className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
+            <div key={item.title} className=' shadow flex flex-col items-center bg-white dark:text-gray-200 dark:bg-secondary-dark-bg px-10 lg:px-5 xl:px-12 py-7 rounded-2xl'>
               <button type='button' style={{color: item.iconColor, backgroundColor: item.iconBg}} className='text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl'>
                 {item.icon}
               </button>
               <p className='mt-3'>
-                <span className='text-lg font-semibold'>
+                <div className='text-lg font-semibold'>
                   {item.amount}
-                </span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                </div>
+                <div className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
-                </span>
+                </div>
               </p>
               <p className='text-sm text-gray-400 mt-1 '>
                 {item.title}
@@ -54,7 +54,7 @@ export default function ECommerce() {
 
 
       <div className='flex gap-10 flex-wrap justify-center'>
-              <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl p-3 md:w-780'>
+              <div className=' shadow bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl p-3 w-full'>
                 <div className='flex justify-between mx-10 mt-10'>
                   <p className='font-semibold text-xl'>Revenue Updates</p>
                   <div className='flex items-center gap-4'>
